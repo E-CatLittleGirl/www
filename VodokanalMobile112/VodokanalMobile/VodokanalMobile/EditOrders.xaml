@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VodokanalMobile.EditOrders">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Label Text="{Binding Info_message}" FontSize="Medium" TextColor="Black" BackgroundColor="Gainsboro"/>
+            <Label Text="{Binding Date}" TextColor="Silver" FontSize="Small"/>
+            <StackLayout Orientation="Horizontal" Margin="12">
+                <Image Source="place.png" WidthRequest="10" HeightRequest="10"/>
+                <Label Text= "{Binding Address}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Image Source="zayavitel.png"  WidthRequest="10" HeightRequest="10"/>
+                <Label Text="{Binding Actor}" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="-20,20,10,20">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="33
+                                          "/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="22"/>
+                    </Grid.RowDefinitions>
+                    <Button Grid.Column="0" Grid.Row="0" Text="Сохранить" TextColor="Black" BackgroundColor="LightSteelBlue" BorderWidth="1.5" CornerRadius="50" x:Name="Save" Clicked="Save_Clicked"/>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
